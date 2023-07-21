@@ -33,12 +33,29 @@ class Queue{
         console.log(`${this.items[0]} is peek element.`);
         return this.items[0];
     }
+
+    isEmpty(){
+        console.log(this.count==0 ? "Queue is empty" : "Queue is not empty");
+        return this.count==0;
+    }
+
+    size(){
+        console.log(`${this.count} elements in Queue.`);
+        return this.count;
+    }
+
 }
 
 const q = new Queue();
 q.enqueue(100);
 q.enqueue(200);
 q.enqueue(300);
+q.size();
 q.peek();
+q.isEmpty();
 q.dequeue();
+q.dequeue();
+q.dequeue();
+q.isEmpty();
+q.size();
 q.print();
